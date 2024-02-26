@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="popular-menus">
+        <div class="popular-menus__container">
+            <div class="popular-menus__h1">Популярные меню</div>
+            <div class="popular-menus__switch-wrapper">
+                <button type="button" class="popular-menus__switch js-popular-menus-switch active">
+                    Сеты/Наборы в доставку
+                </button>
+                <button type="button" class="popular-menus__switch js-popular-menus-switch">
+                    Фуршет
+                </button>
+                <button type="button" class="popular-menus__switch js-popular-menus-switch">
+                    Банкет
+                </button>
+                <button type="button" class="popular-menus__switch js-popular-menus-switch">
+                    Кофе-брейк
+                </button>
+                <button type="button" class="popular-menus__switch js-popular-menus-switch">
+                    Шоу-кукинг
+                </button>
+                <button type="button" class="popular-menus__switch js-popular-menus-switch">
+                    Частный праздник
+                </button>
+            </div>
+
+            <div class="popular-menus__filter js-popular-menus-filter">
+                <div class="popular-menus__select-wrap">
+                    <span class="popular-menus__select-label">Формат мероприятия:</span>
+                    <select id="selectFormatEvent" class="popular-menus__select select2-selection__arrow">
+                        <option value="" class="popular-menus__select-placeholder js-select-placeholder" selected
+                            disabled>Все форматы</option>
+                        <option value="1">Формат 1</option>
+                        <option value="2">Формат 2</option>
+                        <option value="3">Формат 3</option>
+                    </select>
+                </div>
+
+                <div class="popular-menus__select-wrap">
+                    <span class="popular-menus__select-label">Стоимость на персону:</span>
+                    <select id="selectCost" class="popular-menus__select select2-multiple-arrow"
+                        data-placeholder="Не выбрано" multiple>
+                        <option value="1">4904 руб.</option>
+                        <option value="2">4904 руб.</option>
+                        <option value="3">4904 руб.</option>
+                        <option value="4">4904 руб.</option>
+                        <option value="5">4904 руб.</option>
+                    </select>
+                </div>
+
+                <div class="popular-menus__select-wrap">
+                    <span class="popular-menus__select-label">Количество персон:</span>
+                    <select id="selectNumberPersons" class="popular-menus__select select2-multiple-arrow"
+                        data-placeholder="Не выбрано" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+
+                <div class="popular-menus__select-wrap">
+                    <span class="popular-menus__select-label">Номер:</span>
+                    <div class="popular-menus__filter-input-wrap">
+                        <input type="number" class="popular-menus__filter-input js-popular-menus-input"
+                            placeholder="Введите номер">
+                        <span class="popular-menus__clear-button js-popular-menus-clear-button">×</span>
+                    </div>
+                </div>
+
+                <button
+                    class="popular-menus__button popular-menus__filter-clear-all js-popular-menus-filter-clear-all">Сбросить</button>
+            </div>
+
+            <div class="popular-menus__sorting">
+                <div class="popular-menus__sorting-text">
+                    Всего найдено
+                    <span class="popular-menus__sorting-text bold">57</span>
+                    вариантов меню
+                </div>
+                <div class="popular-menus__sorting-inner">
+                    <div class="popular-menus__sorting-btn price js-sorting-btn" 
+                    data-sorting="price"           
+                    data-max-sort="true"
+                    >
+                        по цене
+                    </div>
+                    <div class="popular-menus__sorting-btn persons js-sorting-btn" data-sorting="persons"
+                        data-max-sort="true"
+                    >
+                        по колличеству персон
+                    </div>
+                    <div class="popular-menus__sorting-btn default active js-sorting-btn" data-sorting="default">
+                        по умолчанию
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular-menus__cards">
+                <div class="popular-menus__card">
+                    <a href="detail-menu.html" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card1.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="detail-menu.html" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/full-card.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button edit js-modal-menus-btn"
+                                data-id="jsModalMenus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card3.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button">Изменить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card4.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button edit-bold">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card1.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card2.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button edit js-modal-menus-btn"
+                                data-id="jsModalMenus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card3.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button">Изменить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card4.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button edit-bold">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card1.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card2.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button edit"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card3.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button">Изменить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-menus__card">
+                    <a href="" class="popular-menus__card-picture" target="_blank">
+                        <img src="/images/card4.jpg" alt="" class="popular-menus__card-img">
+                    </a>
+                    <div class="popular-menus__card-cont">
+                        <a href="" class="popular-menus__card-title" target="_blank">
+                            Классический фуршет 40 гостей
+                        </a>
+                        <div class="popular-menus__card-per-person">
+                            На персону:
+                            <div class="popular-menus__card-per-person-tags">
+                                <span class="popular-menus__card-per-person-tag">0.7 л.</span>
+                                <span class="popular-menus__card-per-person-tag">713.48 гр.</span>
+                                <span class="popular-menus__card-per-person-tag">4904 руб.</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__card-description">
+                            #90 Канапе и мини-закуски, Брускетты, Анимационная
+                            станция холодных закусок, Мини-салаты, Холодные закуски, Анимация горячих закусок, Горячие
+                            закуски в рамекинах, Фрукты, Мини-десерты, Минеральная вода, Соки и морсы, Горячие напитки.
+                            Обслуживающий персонал и всё необходимое оборудование включены в стоимость
+                        </div>
+                        <div class="popular-menus__card-footer">
+                            <div class="popular-menus__card-total-price">
+                                Итого: от
+                                <span class="popular-menus__card-total-price--bold">
+                                    49525
+                                </span>
+                                руб.
+                            </div>
+                            <a href="" class="popular-menus__button popular-menus__card-link" title="Скачать PDF"></a>
+                            <button type="button" class="popular-menus__button edit-bold">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular-menus__info">
+                <div class="popular-menus__info-title">
+                    Добро пожаловать на страницу "Популярные меню" компании «3F-Catering»!
+                </div>
+                <div class="popular-menus__info-txt">
+                    Мы рады предложить вам широкий выбор вариантов фуршетов для любого мероприятия. Независимо от того,
+                    нужно ли вам угощение на корпоративном вечере, свадьбе, дне рождении или другом особом событии, у
+                    нас
+                    есть идеальное решение для вашего вкуса и числа гостей.
+                </div>
+                <ol class="popular-menus__list">
+                    <li class="popular-menus__item">
+                        Фуршет "Императорский вечер" - это роскошное блюдо, предназначенное для особых случаев и больших
+                        компаний. Сочетание изысканных закусок и эксклюзивных деликатесов превратит ваше мероприятие в
+                        настоящий
+                        праздник вкуса. Это меню доступно для групп от 50 до 100 человек.
+                    </li>
+                    <li class="popular-menus__item">
+                        Фуршет "Деловая встреча" - идеальное решение для корпоративных мероприятий и бизнес-ланчей. Это
+                        практичное и стильное меню, которое сочетает в себе разнообразные салаты, закуски и горячие
+                        блюда. Мы
+                        готовы обслужить группы от 20 до 50 человек.
+                    </li>
+                    <li class="popular-menus__item">
+                        Фуршет "Семейное торжество" - уютное и теплое меню, созданное специально для семейных сборов и
+                        небольших
+                        праздников. Вас ждут блюда из свежих ингредиентов, позволяющие насладиться вкусом и общением.
+                        Доступно
+                        для групп от 10 до 20 человек.
+                    </li>
+                    <li class="popular-menus__item">
+                        Фуршет "Вегетарианская фантазия" - отличный выбор для любителей растительной пищи. Мы предлагаем
+                        разнообразные блюда, которые сочетают в себе свежие овощи, фрукты, зелень и оригинальные соусы.
+                        Это меню
+                        доступно для групп от 10 до 50 человек.
+                    </li>
+                    <li class="popular-menus__item">
+                        Фуршет "Фруктовый сад" - идеальный выбор для тех, кто хочет насладиться сладостями природы. Мы
+                        предлагаем широкий ассортимент свежих фруктов, ягод, десертов и сладких пирожных. Подходит для
+                        групп от
+                        10 до 100 человек.
+                    </li>
+                </ol>
+                <div class="popular-menus__info-txt">
+                    Все наши фуршеты могут быть индивидуально адаптированы под ваши предпочтения и особенности
+                    мероприятия.
+                    Мы гарантируем высокое качество ингредиентов, профессиональное обслуживание и красивое оформление.
+                </div>
+                <div class="popular-menus__info-txt">
+                    Не важно, сколько у вас гостей и какие предпочтения - в компании «3F-Catering» мы всегда готовы
+                    предложить вам идеальное решение. Свяжитесь с нами сегодня и доверьте организацию вашего мероприятия
+                    профессионалам!
+                </div>
+            </div>
+        </div>
+
+        <div data-id="jsModalMenus" class="popular-menus__modal js-popular-menus-overlay">
+            <div class="popular-menus__modal-inner js-modal-menus">
+                <div class="popular-menus__modal-head">
+                    <div class="popular-menus__modal-logo-inner">
+                        <img src="/images/logo.svg" alt="логотип" class="popular-menus__modal-logo">
+                    </div>
+                    <span class="popular-menus__modal-close js-modal-menus-close"></span>
+                </div>
+                <div class="popular-menus__modal-body">
+                    <div class="popular-menus__modal-title">3F Кейтеринг - индивидуальная смета</div>
+                    <div class="popular-menus__modal-text">
+                        Введите описание мероприятия, менеджер актуализирует смету и свяжется с вами для согласования
+                    </div>
+                    <form class="popular-menus__modal-form">
+                        <div class="popular-menus__select-wrap">
+                            <span class="popular-menus__modal-label">Имя*</span>
+                            <div class="popular-menus__filter-input-wrap">
+                                <input type="text" class="popular-menus__modal-input js-popular-menus-input"
+                                    placeholder="Как к вам обращаться?" name="name" required>
+                                <span class="popular-menus__clear-button top-50 js-popular-menus-clear-button">×</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__grid">
+                            <div class="popular-menus__select-wrap">
+                                <span class="popular-menus__modal-label">Телефон*</span>
+                                <div class="popular-menus__filter-input-wrap">
+                                    <input type="tel" class="popular-menus__modal-input js-popular-menus-input"
+                                        placeholder="Ваш телефон" name="phone" required>
+                                    <span
+                                        class="popular-menus__clear-button top-50 js-popular-menus-clear-button">×</span>
+                                </div>
+                            </div>
+                            <div class="popular-menus__select-wrap">
+                                <span class="popular-menus__modal-label">Почта (не обязательно)</span>
+                                <div class="popular-menus__filter-input-wrap">
+                                    <input type="email" class="popular-menus__modal-input js-popular-menus-input"
+                                        placeholder="Ваш Email">
+                                    <span
+                                        class="popular-menus__clear-button top-50 js-popular-menus-clear-button">×</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-menus__select-wrap">
+                            <span class="popular-menus__modal-label">Мероприятие*</span>
+                            <div class="popular-menus__filter-input-wrap">
+                                <input type="text" class="popular-menus__modal-input js-popular-menus-input"
+                                    placeholder="Какое планируется мероприятие?" required>
+                                <span class="popular-menus__clear-button top-50 js-popular-menus-clear-button">×</span>
+                            </div>
+                        </div>
+                        <div class="popular-menus__select-wrap">
+                            <span class="popular-menus__modal-label">Информация о мероприятии*</span>
+                            <div class="popular-menus__filter-input-wrap">
+                                <textarea class="popular-menus__modal-textarea js-popular-menus-textarea" name="" id=""
+                                    placeholder="Опишите подробно параметры необходимые для организации кейтеринга: сколько человек, продолжительность, место проведения"
+                                    required></textarea>
+                                <span class="popular-menus__clear-button right js-popular-menus-clear-button">×</span>
+                            </div>
+                        </div>
+                        <button class="popular-menus__modal-form-submit-btn js-popular-menus-submit-btn"
+                            type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/select2.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
