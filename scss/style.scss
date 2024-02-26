@@ -134,14 +134,14 @@ $border-radius-20: 20px;
     &__link {
         color: #A3A9C2;
         font: 400 14px / normal $inter;
-        background: url('images/link-arrow.svg') no-repeat 100%;
+        background: url('../images/link-arrow.svg') no-repeat 100%;
         padding: 0 24px 0 0;
         text-decoration: none;
         transition: all .3s;
 
         &:hover {
             color: $color-grey-dark;
-            background: url('images/link-arrow-active.svg') no-repeat 100%;
+            background: url('../images/link-arrow-active.svg') no-repeat 100%;
         }
 
         &.active {
@@ -214,12 +214,12 @@ $border-radius-20: 20px;
                 display: block;
                 width: 21px;
                 height: 21px;
-                background: url('images/order.svg') no-repeat center / cover;
+                background: url('../images/order.svg') no-repeat center / cover;
             }
 
             &:hover {
                 i {
-                    background: url('images/order-red.svg') no-repeat center / cover;
+                    background: url('../images/order-red.svg') no-repeat center / cover;
                 }
             }
         }
@@ -458,7 +458,7 @@ $border-radius-20: 20px;
                 .select2-selection__arrow {
                     width: 24px;
                     height: 24px;
-                    background-image: url('images/arrow-down.svg');
+                    background-image: url('../images/arrow-down.svg');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -501,7 +501,7 @@ $border-radius-20: 20px;
                     position: absolute;
                     top: 0;
                     right: 0;
-                    background-image: url('images/arrow-down.svg');
+                    background-image: url('../images/arrow-down.svg');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -557,7 +557,7 @@ $border-radius-20: 20px;
                 display: block;
                 width: 18px;
                 height: 18px;
-                background: url('images/link-arrow.svg') no-repeat center / cover;
+                background: url('../images/link-arrow.svg') no-repeat center / cover;
                 transform: rotate(-90deg);
             }
 
@@ -571,7 +571,7 @@ $border-radius-20: 20px;
                 color: $color-black;
 
                 &::after {
-                    background: url('images/link-arrow-active.svg') no-repeat center / cover;
+                    background: url('../images/link-arrow-active.svg') no-repeat center / cover;
                 }
 
                 &.default {
@@ -672,12 +672,12 @@ $border-radius-20: 20px;
             height: 38px;
             max-height: 38px;
             padding: 0;
-            background-image: url('images/download.svg');
+            background-image: url('../images/download.svg');
             background-repeat: no-repeat;
             background-position: center;
 
             &:hover {
-                background-image: url('images/download-red.svg');
+                background-image: url('../images/download-red.svg');
                 background-repeat: no-repeat;
                 background-position: center;
             }
@@ -690,12 +690,12 @@ $border-radius-20: 20px;
                 height: 38px;
                 max-height: 38px;
                 padding: 0;
-                background-image: url('images/edit.svg');
+                background-image: url('../images/edit.svg');
                 background-repeat: no-repeat;
                 background-position: center;
 
                 &:hover {
-                    background-image: url('images/edit-red.svg');
+                    background-image: url('../images/edit-red.svg');
                     background-repeat: no-repeat;
                     background-position: center;
                 }
@@ -775,7 +775,7 @@ $border-radius-20: 20px;
         &-close {
             width: 24px;
             height: 24px;
-            background: url('images/close.svg') no-repeat center / cover;
+            background: url('../images/close.svg') no-repeat center / cover;
             cursor: pointer;
             display: block;
         }
@@ -1123,7 +1123,7 @@ body {
         .slick-arrow {
             width: 24px;
             height: 24px;
-            background: url('images/slide-arrow.svg') no-repeat center / cover;
+            background: url('../images/slide-arrow.svg') no-repeat center / cover;
             font-size: 0;
             border: 1px solid transparent;
             border-radius: 6px;
@@ -1193,11 +1193,11 @@ body {
                     cursor: pointer;
 
                     &[data-like="false"] {
-                        background: url('images/like-false.svg');
+                        background: url('../images/like-false.svg');
                     }
 
                     &[data-like="true"] {
-                        background: url('images/like-true.svg');
+                        background: url('../images/like-true.svg');
                     }
                 }
             }
@@ -1224,13 +1224,13 @@ body {
 
                 &.flag {
                     i {
-                        background: url('images/flag.svg');
+                        background: url('../images/flag.svg');
                     }
                 }
 
                 &.share {
                     i {
-                        background: url('images/share.svg');
+                        background: url('../images/share.svg');
                     }
                 }
             }
@@ -1335,19 +1335,19 @@ body {
 
             &.edit {
                 i {
-                    background-image: url('images/bxs_edit.svg');
+                    background-image: url('../images/bxs_edit.svg');
                 }
             }
 
             &.download {
                 i {
-                    background-image: url('images/material-symbols_download.svg');
+                    background-image: url('../images/material-symbols_download.svg');
                 }
             }
 
             &.back {
                 i {
-                    background-image: url('images/pajamas_go-back.svg');
+                    background-image: url('../images/pajamas_go-back.svg');
                 }
             }
         }
